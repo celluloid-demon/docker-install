@@ -406,17 +406,17 @@ do_install() {
 	lsb_dist=$( get_distribution )
 	lsb_dist="$(echo "$lsb_dist" | tr '[:upper:]' '[:lower:]')"
 
-	if is_wsl; then
-		echo
-		echo "WSL DETECTED: We recommend using Docker Desktop for Windows."
-		echo "Please get Docker Desktop from https://www.docker.com/products/docker-desktop/"
-		echo
-		cat >&2 <<-'EOF'
+	# if is_wsl; then
+	# 	echo
+	# 	echo "WSL DETECTED: We recommend using Docker Desktop for Windows."
+	# 	echo "Please get Docker Desktop from https://www.docker.com/products/docker-desktop/"
+	# 	echo
+	# 	cat >&2 <<-'EOF'
 
-			You may press Ctrl+C now to abort this script.
-		EOF
-		( set -x; sleep 20 )
-	fi
+	# 		You may press Ctrl+C now to abort this script.
+	# 	EOF
+	# 	( set -x; sleep 20 )
+	# fi
 
 	case "$lsb_dist" in
 
